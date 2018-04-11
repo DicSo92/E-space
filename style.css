@@ -1,0 +1,321 @@
+/* -- Issue : White Bar Right Small Screen -- */
+html, body { overflow-x: hidden; }
+
+/* -------------------------------- */
+/*              NavBar              */
+/* -------------------------------- */
+@media screen and (max-width: 760px) {
+    #brand {
+        display: none;
+    }
+    #connectPanier {
+        flex-direction: row;
+    }
+}
+
+/* -------------------------------- */
+/*        ScrollTop Animation       */
+/* -------------------------------- */
+@keyframes scrollTop {
+    0% { opacity: 0 ; }
+    100% { opacity: 1 ; }
+}
+
+#btnTop {
+    display: none;
+    animation: scrollTop 2s normal;
+}
+
+/* -------------------------------- */
+/*          Nav Categories          */
+/* -------------------------------- */
+.background-nav-category {
+    background-color: rgba(185, 187, 190, 1);
+    z-index: 50;
+    width: 100%;
+    opacity: 1;
+}
+
+/* Avec Js */
+@keyframes reduceNavCategory{
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0.88;
+    }
+}
+/* ----------- */
+
+@keyframes hoverNav {
+    0% { background-color: #b9bbbe; }
+    100 % {}
+}
+@keyframes hoverOutNav {
+    0% {background-color: #6c757d;}
+    100 % {}
+}
+
+.animHoverNav {
+    animation: hoverOutNav 0.4s normal;
+    background-color: #b9bbbe;
+    border-left: 1px solid #aaaaaa;
+    border-right: 1px solid #aaaaaa;
+}
+
+.animHoverNav:hover {
+    animation: hoverNav 0.4s normal;
+    background-color: #6c757d;
+    text-decoration: none;
+}
+
+.container-category {
+    width: 75%;
+}
+.icon-category {
+    width: 25%;
+}
+
+@media screen and (max-width: 980px) {
+    .container-category {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 760px) {
+    .icon-category {
+        width: 50%;
+    }
+}
+@media screen and (max-width: 415px) {
+    .icon-category {
+        width: 75%;
+    }
+    .text-category {
+        display: none;
+    }
+}
+
+/* -------------------------------- */
+/*        Messages Animation        */
+/* -------------------------------- */
+@keyframes popMessage {
+    0%   { opacity:0; }
+    15% { opacity:0.8; }
+    85% { opacity: 0.8}
+    100% { opacity: 0}
+}
+
+.login-message {
+    position: absolute;
+    z-index: 15000;
+    background-color: darkred;
+    opacity: 0;
+    animation: popMessage 5s ease-in-out;
+}
+
+.v-login-message {
+    position: absolute;
+    z-index: 15000;
+    background-color: darkgreen;
+    opacity: 0;
+    animation: popMessage 5s ease-in-out;
+}
+
+
+
+/* -------------------------------- */
+/*            Backgrounds           */
+/* -------------------------------- */
+.background-articles {
+    background-color: #404040;
+}
+
+.dark-1 {
+    background-color: #1b1e21;
+}
+
+
+/* -------------------------------- */
+/*              Cards               */
+/* -------------------------------- */
+.card {
+    background-color: #727272;
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+    transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.shadow:hover {
+    box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.2), 0px 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0, 0, 0, 0.12);
+}
+
+.shadow {
+    min-width: 240px;
+    max-width: 400px;
+}
+
+.btn-articles {
+
+}
+
+
+/* -------------------------------- */
+/*             Carousel             */
+/* -------------------------------- */
+.carousel-caption {
+    top: 30%;
+}
+@media screen and (max-width: 960px) {
+    .carousel-caption {
+        top: 12%;
+    }
+}
+
+@keyframes carouselH1 {
+    0%   { opacity: 0 ; }
+    100% { opacity:  1 ; }
+}
+
+@keyframes carouselH4 {
+    0%   { opacity: 0 ; }
+    33% { opacity: 0 ; }
+    100% { opacity:  1; }
+}
+
+@keyframes carouselBtn {
+    0%   { opacity: 0 ; }
+    66% { opacity: 0 ; }
+    100% { opacity:  1 ; }
+}
+
+.animCarouselH1 {
+    opacity: 1;
+    animation: carouselH1 3s ease-in-out;
+}
+
+.animCarouselH4 {
+    opacity: 1;
+    animation: carouselH4 3s ease-in-out;
+}
+
+.animCarouselBtn {
+    opacity: 1;
+    animation: carouselBtn 3s ease-in-out;
+}
+
+/* -------------------------------- */
+/*              Profil              */
+/* -------------------------------- */
+.avatar {
+    width: 150px;
+    border: double 4px #0056b3;
+}
+
+
+/* -------------------------------- */
+/*              Footer              */
+/* -------------------------------- */
+.primary-footer {
+    background-color: #4e555b;
+}
+
+.secondary-footer {
+    background-color: #1b1e21;
+}
+
+.nav-footer {
+    color: #aaaaaa;
+}
+.nav-footer:hover {
+    text-decoration: none;
+    color: #cccccc;
+}
+
+/*@media screen and (max-width: 400px){
+    .btnTopPage {
+        display: none;
+    }
+}*/
+
+
+/* -------------------------------- */
+/*   Liens Google,Facebook, etc...  */
+/* -------------------------------- */
+.fa {
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+    margin: auto;
+    border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+    padding: 10px 12px;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-google {
+    background: #dd4b39;
+    color: white;
+}
+
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+}
+
+/* -------------------------------- */
+/*             Comments             */
+/* -------------------------------- */
+.background-comments {
+    position: relative;
+    z-index: 51;
+    background-color: #efefef;
+}
+.index-comments {
+    box-shadow: none;
+    background-color: #efefef;
+    border: solid #d6d8db;
+    border-width: 0 1px 0 1px;
+    min-width: 200px;
+}
+@media screen and (min-width: 760px) and (max-width: 980px) {
+    .index-comments:nth-child(4) {
+        display: none;
+    }
+}
+@media screen and (max-width: 760px) {
+    .index-comments {
+        border-width: 1px;
+    }
+}
+
+
+
+.background-propos {
+    background-color: #efefef;
+}
+
+
+
+/* -------------------------------- */
+/*           Vertical-Nav           */
+/* -------------------------------- */
+.decoration-link:hover {
+    text-decoration: none;
+}
+
+
+.test {
+    border-top: solid 1px #686868 ;
+}
+
